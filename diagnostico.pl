@@ -1,5 +1,7 @@
 % Sistema experto para el diagnostico de transtornos del neurodesarrollo
 
+% Sintomas
+
 es_sintoma_de(dificultad-prestar-atencion, trastorno-del-deficit-de-atencion-e-hiperactividad).
 es_sintoma_de(dejar-actividades-sin-terminar, trastorno-del-deficit-de-atencion-e-hiperactividad).
 es_sintoma_de(no-puede-permanecer-sentado, trastorno-del-deficit-de-atencion-e-hiperactividad).
@@ -25,7 +27,31 @@ es_sintoma_de(omisiones-distorciones-fonemas-habla, trastorno-del-desarrollo-del
 es_sintoma_de(dificultad-elaborar-frases, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
 es_sintoma_de(dificultad-asignar-nombres-objetos-familiares, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
 
+% Recomandaciones
 
-
-
+es_recomendacion_para_tratar(asistir-a-un-neuropediatra, trastorno-del-deficit-de-atencion-e-hiperactividad).
+es_recomendacion_para_tratar(asistir-a-un-neuropediatra, trastorno-de-espectro-autista).
+es_recomendacion_para_tratar(asistir-a-un-neuropediatra, trastorno-de-aprendizaje).
+es_recomendacion_para_tratar(asistir-a-un-neuropediatra, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
+es_recomendacion_para_tratar(pasar-por-evaluacion-neuropsicologica, trastorno-del-deficit-de-atencion-e-hiperactividad).
+es_recomendacion_para_tratar(pasar-por-evaluacion-neuropsicologica, trastorno-de-espectro-autista).
+es_recomendacion_para_tratar(pasar-por-evaluacion-neuropsicologica, trastorno-de-aprendizaje).
+es_recomendacion_para_tratar(pasar-por-evaluacion-neuropsicologica, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
+es_recomendacion_para_tratar(terapia-conductual, trastorno-del-deficit-de-atencion-e-hiperactividad).
+es_recomendacion_para_tratar(terapia-de-atencion-concentracion, trastorno-del-deficit-de-atencion-e-hiperactividad).
+es_recomendacion_para_tratar(terapia-psicomotriz, trastorno-del-deficit-de-atencion-e-hiperactividad).
+es_recomendacion_para_tratar(talleres-extra-curriculares, trastorno-del-deficit-de-atencion-e-hiperactividad).
+es_recomendacion_para_tratar(terapia-de-lenguaje, trastorno-de-espectro-autista).
+es_recomendacion_para_tratar(terapia-ocupacional, trastorno-de-espectro-autista).
+es_recomendacion_para_tratar(taller-de-habilidades-sociales, trastorno-de-espectro-autista).
+es_recomendacion_para_tratar(terapia-sensorial, trastorno-de-espectro-autista).
+es_recomendacion_para_tratar(terapia-de-atencion-concentracion, trastorno-de-espectro-autista).
+es_recomendacion_para_tratar(educacion-personalizada-o-inclusiva, trastorno-de-espectro-autista).
+es_recomendacion_para_tratar(apoyo-psicopedagogico, trastorno-de-espectro-autista).
+es_recomendacion_para_tratar(educacion-personalizada, trastorno-de-aprendizaje).
+es_recomendacion_para_tratar(apoyo-psicopedagogico, trastorno-de-aprendizaje).
+es_recomendacion_para_tratar(terapia-de-aprendizaje, trastorno-de-aprendizaje).
+es_recomendacion_para_tratar(terapia-de-lenguaje, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
+es_recomendacion_para_tratar(educacion-personalizada, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
+es_recomendacion_para_tratar(apoyo-psicopedagogico, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
 
