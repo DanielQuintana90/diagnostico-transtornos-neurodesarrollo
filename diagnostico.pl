@@ -1,5 +1,7 @@
 % Sistema experto para el diagnostico de transtornos del neurodesarrollo
 
+% ------------------------------- Base del conocimiento ---------------------------------
+
 % Sintomas
 
 es_sintoma_de(dificultad-prestar-atencion, trastorno-del-deficit-de-atencion-e-hiperactividad).
@@ -27,7 +29,7 @@ es_sintoma_de(omisiones-distorciones-fonemas-habla, trastorno-del-desarrollo-del
 es_sintoma_de(dificultad-elaborar-frases, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
 es_sintoma_de(dificultad-asignar-nombres-objetos-familiares, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
 
-% Recomandaciones
+% Recomendaciones
 
 es_recomendacion_para_tratar(asistir-a-un-neuropediatra, trastorno-del-deficit-de-atencion-e-hiperactividad).
 es_recomendacion_para_tratar(asistir-a-un-neuropediatra, trastorno-de-espectro-autista).
@@ -54,4 +56,13 @@ es_recomendacion_para_tratar(terapia-de-aprendizaje, trastorno-de-aprendizaje).
 es_recomendacion_para_tratar(terapia-de-lenguaje, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
 es_recomendacion_para_tratar(educacion-personalizada, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
 es_recomendacion_para_tratar(apoyo-psicopedagogico, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
+
+% ---------------------------------- Motor de inferencia ---------------------------------
+
+diagnostico_tratamiento(Sintoma, Tratamiento) :-
+    es_sintoma_de(Sintoma, Enfermedad),
+    es_recomendacion_para_tratar(Tratamiento, Enfermedad).
+
+
+
 
