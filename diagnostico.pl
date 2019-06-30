@@ -57,11 +57,45 @@ es_recomendacion_para_tratar(terapia-de-lenguaje, trastorno-del-desarrollo-del-h
 es_recomendacion_para_tratar(educacion-personalizada, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
 es_recomendacion_para_tratar(apoyo-psicopedagogico, trastorno-del-desarrollo-del-habla-y-del-lenguaje).
 
+% Preguntas
+
+pregunta(dificultad-prestar-atencion) :- write('¿Tiene dificultad para prestar atención?').
+pregunta(dejar-actividades-sin-terminar) :- write('¿Suele dejar actividades sin terminar?').
+pregunta(no-puede-permanecer-sentado) :- write('¿Presenta dificultad para permanecer sentado(a)?').
+pregunta(inquieto-distintos-ambientes) :- write('¿Suele inquietarse en distintos ambientes?').
+pregunta(no-puede-organizarse) :- write('¿Tiene dificultad para organizarse?').
+pregunta(no-piensa-en-consecuencias) :- write('¿No piensa en las consecuencias de sus acciones?').
+pregunta(retraso-adquisicion-lenguaje) :- write('¿Presentó retraso en la adquisición del lenguaje?').
+pregunta(solo-dice-algunas-palabras) :- write('¿Solo dice algunas palabras claves?').
+pregunta(movimientos-repetitivos) :- write('¿Realiza movimientos repetitivos?').
+pregunta(fijacion-temas-especificos) :- write('¿Presenta fijación en temas específicos?').
+pregunta(rutinario-muy-ordenado) :- write('¿Es muy rutinario, exageradamente ordenado?').
+pregunta(sensibilidad-ruidos-fuertes) :- write('¿Es sensible a ruidos fuertes?').
+pregunta(dificultad-mantener-contacto-visual) :- write('¿Presenta dificultad para mantener contacto visual?').
+pregunta(dificultad-relacionarse-personas) :- write('¿Presenta dificultad para relacionarse con otras personas?').
+pregunta(dificultad-lectura-escritura-calculo) :- write('¿Presenta dificultad para la lectura, escritura, cálculo?').
+pregunta(pobre-rendimiento-escolar) :- write('¿Presenta pobre rendimiento escolar?').
+pregunta(dificultad-comprension-lectora) :- write('¿Presenta dificultad para la comprensión lectora?').
+pregunta(dificultad-aprendizaje) :- write('¿Presenta dificultad para el aprendizaje?').
+pregunta(dificultad-deletrear-palabras) :- write('¿Presenta dificultad para deletrear palabras?').
+pregunta(dificultad-calculos-aritmeticos) :- write('¿Presenta dificultad para realizar cálculos aritméticos?').
+pregunta(dificultad-adquirir-habla) :- write('¿Presentó dificultad para adquirir el habla?').
+pregunta(omisiones-distorciones-fonemas-habla) :- write('Presenta omisiones, distorciones o sustituciones de los fonemas del habla?').
+pregunta(dificultad-elaborar-frases) :- write('¿Presenta dificultad para comprender y asignar nombres a objetos familiares?').
+pregunta(dificultad-asignar-nombres-objetos-familiares) :- write('¿Presenta dificultad para comprender y asignar nombres a objetos familiares?').
+
 % ---------------------------------- Motor de inferencia ---------------------------------
 
 diagnostico_tratamiento(Sintoma, Tratamiento) :-
     es_sintoma_de(Sintoma, Enfermedad),
     es_recomendacion_para_tratar(Tratamiento, Enfermedad).
+
+enfermedad_tratamiento(Enfermedad, Tratamiento) :-
+    es_recomendacion_para_tratar(Tratamiento, Enfermedad).
+
+% --------------------------------- Interfaz de usuario ---------------------------------
+
+
 
 
 
