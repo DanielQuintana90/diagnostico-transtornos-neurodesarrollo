@@ -93,10 +93,34 @@ diagnostico_tratamiento(Sintoma, Tratamiento) :-
 enfermedad_tratamiento(Enfermedad, Tratamiento) :-
     es_recomendacion_para_tratar(Tratamiento, Enfermedad).
 
-% --------------------------------- Interfaz de usuario ---------------------------------
+preguntar(Sintoma) :-
+    pregunta(Sintoma),
+    nl,
+    write('Responda: si. o no. (minúsculas)'),
+    nl,
+    read(Respuesta),
+    Respuesta = 'si', !.
 
+escribir_tratamiento(Tratamiento) :-
+    write(Tratamiento), nl, fail.
 
+% ---------------------------------- Interfaz de usuario ---------------------------------
 
-
+diagnostico :-
+    write('¡Bienvenido!'), nl,
+    write('Por favor, ingrese su nombre (minúsculas): '),
+    read(Nombre),    
+    preguntar(Sintoma),
+    nl,    
+    es_sintoma_de(Sintoma, Enfermedad),
+    write(Nombre),
+    write(', el nombre de la enfermedad que padece es : '),
+    nl,
+    write(Enfermedad),
+    nl,
+    write('El tratamiento consiste en: '),
+    nl,
+    diagnostico_tratamiento(Sintoma, Tratamiento),
+    escribir_tratamiento(Tratamiento).
 
 
